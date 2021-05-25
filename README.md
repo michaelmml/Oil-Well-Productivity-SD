@@ -9,7 +9,7 @@ Analysis of oil &amp; gas productivity from South Dakota Department of Natural R
 
 ## Executive Summary
 South Dakota Department of Agriculture and Natural Resources provides highly detailed information on well-by-well production of oil and gas over time; including also with enhanced production units (EPU) or not. The timeframe and days of production provides a useful way to analyse productivity of each well over time, which is the main aim of this.
-![Overallproduction](https://user-images.githubusercontent.com/84533632/119273442-e56cc780-bc02-11eb-9de8-124affd2d0fd.png)
+![MCMC_algorithm](https://user-images.githubusercontent.com/84533632/119578952-5bb12b80-bdb5-11eb-974e-3ca37fb99df7.png)
 
 Source: https://denr.sd.gov/des/og/producti.aspx
 
@@ -33,6 +33,7 @@ With the long tail of production from a well towards the end of its life, produc
 ## Monte Carlo Markov Chain
 The distribution of well productivity seems to have a Gamma Distribution and so the Metropolis Hastings algorithm is built to analyse this. The MH algorithm as a way to approximate the distribution of a sample is built on the properties of Markov Chains. Here, in the case of a sample with distribution approximate to the Gamma Distribution, we consider the shape parameter and scale parameter with respect to the sample, using a transition matrix to generate the next approximation - hence the Markov property. Using a proposal distribution and the acceptance algorithm of MH, we decide whether to accept the next set of parameters or to keep the same. And so on...
 
+![MCMC_algorithm](https://user-images.githubusercontent.com/84533632/119579037-84d1bc00-bdb5-11eb-9fbb-28069cba4682.png)
 
 ## Distribution of Well Productivity
 
