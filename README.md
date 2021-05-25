@@ -9,7 +9,7 @@ Analysis of oil &amp; gas productivity from South Dakota Department of Natural R
 
 ## Executive Summary
 South Dakota Department of Agriculture and Natural Resources provides highly detailed information on well-by-well production of oil and gas over time; including also with enhanced production units (EPU) or not. The timeframe and days of production provides a useful way to analyse productivity of each well over time, which is the main aim of this.
-![MCMC_algorithm](https://user-images.githubusercontent.com/84533632/119578952-5bb12b80-bdb5-11eb-974e-3ca37fb99df7.png)
+![Overallproduction](https://user-images.githubusercontent.com/84533632/119579185-cd897500-bdb5-11eb-8d26-1afa7e826092.png)
 
 Source: https://denr.sd.gov/des/og/producti.aspx
 
