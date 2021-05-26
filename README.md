@@ -18,7 +18,7 @@ Source: https://denr.sd.gov/des/og/producti.aspx
 
 
 ## Production Analysis
-The bulk of the exploratory data analysis has been to set out the cumulative production of each well and identifying the days taken to reach the tresholds of one-quarter, one-half and three-quarters. 
+The bulk of the exploratory data analysis has been to set out the cumulative production of each well and identifying the days taken to reach the tresholds of one-quarter, one-half and three-quarters. See the attached csv file distilling the data on a per-well basis with characteristics such as total production and number of days to reach quarter / half / three-quarter of cumulative production.
 
 ```
 allprodquarterindex = allprodrate[['Well_Name', 'allprodquarter']].apply(lambda x: abs(data.loc[(data['Well_Name'] ==
