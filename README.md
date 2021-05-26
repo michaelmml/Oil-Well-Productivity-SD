@@ -8,15 +8,17 @@ Analysis of oil &amp; gas productivity from South Dakota Department of Natural R
 * [Distribution of Well Productivity](#distribution-of-well-productivity)
 
 ## Executive Summary
-South Dakota Department of Agriculture and Natural Resources provides highly detailed information on well-by-well production of oil and gas over time; including also with enhanced production units (EPU) or not. The timeframe and days of production provides a useful way to analyse productivity of each well over time, which is the main aim of this.
-![Overallproduction](https://user-images.githubusercontent.com/84533632/119579185-cd897500-bdb5-11eb-8d26-1afa7e826092.png)
+South Dakota Department of Agriculture and Natural Resources provides highly detailed information on well-by-well production of oil and gas over time; including also with enhanced production units (EPU) or not. The main criterias of interest are as follows: County / Well Name / Reported Well Status / Date Production / Production Days.
+
+The timeframe and days of production provides a useful way to analyse productivity of each well over time, which is the main aim of this exercise. As this is an academic exercise to analyse general productivity, oil and gas production metrics have been combined into barrels of oil equivalent through the assumption 1 BoE = 5,800 cf. Furthermore, whilst practically, the wells will likely undergo maintenance between production days blocks, this data is not available and therefore omitted.
+
+![Overallproduction](https://user-images.githubusercontent.com/84533632/119716306-e5680400-be5c-11eb-807b-76ae6a8d2beb.png)
 
 Source: https://denr.sd.gov/des/og/producti.aspx
 
-Oil and gas production metrics have been combined into barrels of oil equivalent through the assumption 1 BoE = 5,800 mcf.
 
 ## Production Analysis
-The bulk of the explroatory data analysis has been to set out the cumulative production of each well and identifying the days taken to reach the tresholds of one-quarter, one-half and three-quarters. 
+The bulk of the exploratory data analysis has been to set out the cumulative production of each well and identifying the days taken to reach the tresholds of one-quarter, one-half and three-quarters. 
 
 ```
 allprodquarterindex = allprodrate[['Well_Name', 'allprodquarter']].apply(lambda x: abs(data.loc[(data['Well_Name'] ==
@@ -30,10 +32,12 @@ allprodhalfdays = allprodhalfindex.apply(lambda x: data['Cumsum_Days'].loc[x])
 
 With the long tail of production from a well towards the end of its life, productivity has been defined with the fraction: Three-quarter of total cumulative production / Number of days to reach threshold. Wells with productivity of less than 1 barrels per day have also been removed.
 
+
+
 ## Monte Carlo Markov Chain
 The distribution of well productivity seems to have a Gamma Distribution and so the Metropolis Hastings algorithm is built to analyse this. The MH algorithm as a way to approximate the distribution of a sample is built on the properties of Markov Chains. Here, in the case of a sample with distribution approximate to the Gamma Distribution, we consider the shape parameter and scale parameter with respect to the sample, using a transition matrix to generate the next approximation - hence the Markov property. Using a proposal distribution and the acceptance algorithm of MH, we decide whether to accept the next set of parameters or to keep the same. And so on...
 
-![MCMC_algorithm](https://user-images.githubusercontent.com/84533632/119579037-84d1bc00-bdb5-11eb-9fbb-28069cba4682.png)
+![MCMC_algorithm](https://user-images.githubusercontent.com/84533632/119716490-15afa280-be5d-11eb-85cc-f78b9b37dec9.png)
 
 ## Distribution of Well Productivity
 
@@ -58,7 +62,8 @@ def metropolis_hastings(p, q, transition_dist, initial_parameters, iterations, d
 ```
 
 As an illustration, from the average of the accepted parameters, the gamma distribution is then used to generate obversations to layer on top of the observed data.
-![MCMC](https://user-images.githubusercontent.com/84533632/119273914-059d8600-bc05-11eb-989f-5df8fd1a0454.png)
+
+![MCMC_normal](https://user-images.githubusercontent.com/84533632/119716522-1cd6b080-be5d-11eb-9125-97946125e8e1.png)
 
 Out of interest, the plot of data without including Enhanced Recovery Units is as follows:
 
