@@ -33,9 +33,10 @@ allprodhalfdays = allprodhalfindex.apply(lambda x: data['Cumsum_Days'].loc[x])
 With the long tail of production from a well towards the end of its life, productivity has been defined with the fraction: Three-quarter of total cumulative production / Number of days to reach threshold. Wells with productivity of less than 1 barrels per day have also been removed.
 
 
-
 ## Monte Carlo Markov Chain
 The distribution of well productivity seems to have a Gamma Distribution and so the Metropolis Hastings algorithm is built to analyse this. The MH algorithm as a way to approximate the distribution of a sample is built on the properties of Markov Chains. Here, in the case of a sample with distribution approximate to the Gamma Distribution, we consider the shape parameter and scale parameter with respect to the sample, using a transition matrix to generate the next approximation - hence the Markov property. Using a proposal distribution and the acceptance algorithm of MH, we decide whether to accept the next set of parameters or to keep the same. And so on...
+
+In this instance when the algorithm is run, the final value for the parameters are shape parameter = 1.17702788 and scale parameter = 45.2135939. Taking the average of the last 50% of accepted results gives shape parameter = 1.14055234 and scale parameter = 45.44502724. The reason is that we start from a random set of parameters which the algorithm move from towards the optimal parameter space.
 
 ![MCMC_algorithm](https://user-images.githubusercontent.com/84533632/119716490-15afa280-be5d-11eb-85cc-f78b9b37dec9.png)
 
@@ -67,5 +68,4 @@ As an illustration, from the average of the accepted parameters, the gamma distr
 
 Out of interest, the plot of data without including Enhanced Recovery Units is as follows:
 
-![MCMC_normal](https://user-images.githubusercontent.com/84533632/119567384-2b14c600-bda4-11eb-9422-99812886ce0f.png)
 
