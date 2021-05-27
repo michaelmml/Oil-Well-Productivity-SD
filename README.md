@@ -13,7 +13,6 @@ South Dakota Department of Agriculture and Natural Resources provides highly det
 The timeframe and days of production provides a useful way to analyse productivity of each well over time, which is the main aim of this exercise. As this is an academic exercise to analyse general productivity, oil and gas production metrics have been combined into barrels of oil equivalent through the assumption 1 BoE = 5,800 cf. Furthermore, whilst practically, the wells will likely undergo maintenance between production days blocks, this data is not available and therefore omitted.
 
 ![Overallproduction](https://user-images.githubusercontent.com/84533632/119716306-e5680400-be5c-11eb-807b-76ae6a8d2beb.png)
-
 ![wellproduction](https://user-images.githubusercontent.com/84533632/119860588-63381800-bf0e-11eb-82fa-085ed0bcd492.png)
 
 Source: https://denr.sd.gov/des/og/producti.aspx
