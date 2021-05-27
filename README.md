@@ -70,7 +70,3 @@ def metropolis_hastings(p, q, transition_dist, initial_parameters, iterations, d
 As an illustration, from the average of the accepted parameters, the gamma distribution is then used to generate obversations to layer on top of the observed data.
 
 ![MCMC_normal](https://user-images.githubusercontent.com/84533632/119716522-1cd6b080-be5d-11eb-9125-97946125e8e1.png)
-
-Out of interest, the plot of data without including Enhanced Recovery Units is as follows:
-
-
