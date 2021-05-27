@@ -44,7 +44,9 @@ The distribution of well productivity seems to have a Gamma Distribution and so 
 
 In this instance when the algorithm is run, the final value for the parameters are shape parameter = 1.17702788 and scale parameter = 45.2135939. Taking the average of the last 50% of accepted results gives shape parameter = 1.14055234 and scale parameter = 45.44502724. The reason is that we start from a random set of parameters which the algorithm move from towards the optimal parameter space.
 
-![MCMC_algorithm](https://user-images.githubusercontent.com/84533632/119716490-15afa280-be5d-11eb-85cc-f78b9b37dec9.png)
+![MCMC_KDE](https://user-images.githubusercontent.com/84533632/119871303-35f16700-bf1a-11eb-92c3-f3480c1a076f.png)
+
+Figure: Last 50% of accepted parameters shown in a Kernel Density Estimate (KDE) plot.
 
 ## Distribution of Well Productivity
 
