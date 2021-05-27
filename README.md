@@ -31,8 +31,13 @@ allprodquarterdays = allprodquarterindex.apply(lambda x: data['Cumsum_Days'].loc
 allprodhalfdays = allprodhalfindex.apply(lambda x: data['Cumsum_Days'].loc[x])
 ```
 
-With the long tail of production from a well towards the end of its life, productivity has been defined with the fraction: Three-quarter of total cumulative production / Number of days to reach threshold. Wells with productivity of less than 1 barrels per day have also been removed.
+With the long tail of production from a well towards the end of its life, productivity has been defined with the fraction: Three-quarter of total cumulative production / Number of days to reach threshold. Wells with productivity of less than 1 barrels per day have also been removed. 
 
+In summary, the by-well analysis produces a few key variables: cumulative production | number of days to reach half-life | productivity rate | date at half-life (an indicator of age).
+
+![pairplot](https://user-images.githubusercontent.com/84533632/119867758-25d78880-bf16-11eb-8ec8-fa39512c4e0c.png)
+
+Some interesting patterns in this pairs plot include the plot between the age indicator and productivity, which show the region of increased productivity of wells post-2000s. This is also seen in the number of days to reach half-life.
 
 ## Monte Carlo Markov Chain
 The distribution of well productivity seems to have a Gamma Distribution and so the Metropolis Hastings algorithm is built to analyse this. The MH algorithm as a way to approximate the distribution of a sample is built on the properties of Markov Chains. Here, in the case of a sample with distribution approximate to the Gamma Distribution, we consider the shape parameter and scale parameter with respect to the sample, using a transition matrix to generate the next approximation - hence the Markov property. Using a proposal distribution and the acceptance algorithm of MH, we decide whether to accept the next set of parameters or to keep the same. And so on...
