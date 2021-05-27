@@ -14,7 +14,7 @@ The timeframe and days of production provides a useful way to analyse productivi
 
 ![Overallproduction](https://user-images.githubusercontent.com/84533632/119716306-e5680400-be5c-11eb-807b-76ae6a8d2beb.png)
 
-![wellproduction](https://user-images.githubusercontent.com/84533632/119737412-266d1200-be77-11eb-897f-126c9f2bb922.png)
+![wellproduction](https://user-images.githubusercontent.com/84533632/119860588-63381800-bf0e-11eb-82fa-085ed0bcd492.png)
 
 Source: https://denr.sd.gov/des/og/producti.aspx
 
