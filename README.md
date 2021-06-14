@@ -11,7 +11,7 @@ Analysis of oil &amp; gas productivity from South Dakota Department of Natural R
 South Dakota Department of Agriculture and Natural Resources provides highly detailed information on well-by-well production of oil and gas over time; including also with enhanced production units (EPU) or not. The main criterias of interest are as follows: County / Well Name / Reported Well Status / Date Production / Production Days.
 
 The timeframe and days of production provides a useful way to analyse productivity of each well over time, which is the main aim of this exercise. As this is an academic exercise to analyse general productivity, oil and gas production metrics have been combined into barrels of oil equivalent through the assumption 1 BoE = 5,800 cf. Furthermore, whilst practically, the wells will likely undergo maintenance between production days blocks, this data is not available and therefore omitted.
-![Summary](https://user-images.githubusercontent.com/84533632/119880065-c6807500-bf23-11eb-8565-20773810b568.png)
+![Summary](https://user-images.githubusercontent.com/84533632/121949287-2f535400-cd50-11eb-88f4-b832f16ecd15.png)
 Source: https://denr.sd.gov/des/og/producti.aspx
 
 
