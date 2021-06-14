@@ -3,6 +3,7 @@ Analysis of oil &amp; gas productivity from South Dakota Department of Natural R
 
 ## Table of Contents
 * [Executive Summary](#executive-summary)
+* [Time Series Forecasting](#time-series-forecasting)
 * [Production Analysis](#productivity-analysis)
 * [Monte Carlo Markov Chain](#monte-carlo-markov-chain)
 * [Distribution of Well Productivity](#distribution-of-well-productivity)
@@ -13,6 +14,12 @@ South Dakota Department of Agriculture and Natural Resources provides highly det
 The timeframe and days of production provides a useful way to analyse productivity of each well over time, which is the main aim of this exercise. As this is an academic exercise to analyse general productivity, oil and gas production metrics have been combined into barrels of oil equivalent through the assumption 1 BoE = 5,800 cf. Furthermore, whilst practically, the wells will likely undergo maintenance between production days blocks, this data is not available and therefore omitted.
 ![Summary](https://user-images.githubusercontent.com/84533632/121949287-2f535400-cd50-11eb-88f4-b832f16ecd15.png)
 Source: https://denr.sd.gov/des/og/producti.aspx
+
+## Time Series Forecasting
+Given the production data, barrels of oil equivalent over time, a time series trend for production per period can be created. In the below analysis, we look to produce and rationalise forecasts from historical observations. In a typical time series analysis, a decomposition is applied to break the series down into trend, seasonal and residual components.
+![Decomposition](https://user-images.githubusercontent.com/84533632/121949723-b43e6d80-cd50-11eb-91d0-1271ea863c0c.png)
+![Diagnostics](https://user-images.githubusercontent.com/84533632/121949730-b7d1f480-cd50-11eb-8542-825028d99306.png)
+![Predictions](https://user-images.githubusercontent.com/84533632/121949739-ba344e80-cd50-11eb-8270-c5f32aeff3e6.png)
 
 
 ## Production Analysis
