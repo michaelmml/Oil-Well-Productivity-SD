@@ -12,12 +12,13 @@ Analysis of oil &amp; gas productivity from South Dakota Department of Natural R
 South Dakota Department of Agriculture and Natural Resources provides highly detailed information on well-by-well production of oil and gas over time; including also with enhanced production units (EPU) or not. The main criterias of interest are as follows: County / Well Name / Reported Well Status / Date Production / Production Days.
 
 The timeframe and days of production provides a useful way to analyse productivity of each well over time, which is the main aim of this exercise. As this is an academic exercise to analyse general productivity, oil and gas production metrics have been combined into barrels of oil equivalent through the assumption 1 BoE = 5,800 cf. Furthermore, whilst practically, the wells will likely undergo maintenance between production days blocks, this data is not available and therefore omitted.
-![Summary](https://user-images.githubusercontent.com/84533632/121949287-2f535400-cd50-11eb-88f4-b832f16ecd15.png)
+![Summary](https://user-images.githubusercontent.com/84533632/122040166-69176f80-cdcf-11eb-8e21-b521136e43ff.png)
 Source: https://denr.sd.gov/des/og/producti.aspx
 
 ## Time Series Forecasting
 Given the production data, barrels of oil equivalent over time, a time series trend for production per period can be created. In the below analysis, we look to produce and rationalise forecasts from historical observations. In a typical time series analysis, a decomposition is applied to break the series down into trend, seasonal and residual components.
 ![Decomposition](https://user-images.githubusercontent.com/84533632/121949723-b43e6d80-cd50-11eb-91d0-1271ea863c0c.png)
+For the forecasting, we are using the method: Autoregressive Integrated Moving Average (ARIMA). This takes in three parameters which account for seasonal, trend and residual data. In summary, this model breaks down into a few components. One, the autoregressive model assumes that the current value in the time series depends on past values and calculates this with linear regression. Moving average is calculated through the mean of the series in addition to error terms. Finally differencing is applied to stablize the mean. The diagnostics function displays the characteristics of the residual; the density and approximate distribution of the residual data.
 ![Diagnostics](https://user-images.githubusercontent.com/84533632/121949730-b7d1f480-cd50-11eb-8542-825028d99306.png)
 ![Predictions](https://user-images.githubusercontent.com/84533632/121949739-ba344e80-cd50-11eb-8270-c5f32aeff3e6.png)
 
